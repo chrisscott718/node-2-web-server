@@ -2,6 +2,7 @@ const express = require('express');
 const hbs = require('hbs');
 const fs = require('fs');
 
+const port = process.env.PORT || 3000;
 // create the app here
 let app = express();
 
@@ -55,6 +56,6 @@ app.get('/bad', (req, res) => {
 });
 
 // start the server to listen for requests.
-app.listen(3000, () => {
+app.listen(port, () => {
   console.log('Server is up and running on localhost:3000');
 });
